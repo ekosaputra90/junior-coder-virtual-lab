@@ -1,0 +1,354 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Junior Coder Virtual Lab | NetBeans Classic — Car Wash</title><style>
+:root{font-family:Arial,'Segoe UI',sans-serif;color:#222;font-size:12px}*{box-sizing:border-box}body{margin:0;background:#eee;overflow:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}.menu{height:25px;background:#f3f3f3;border-bottom:1px solid #bbb;display:flex;align-items:center;gap:0;white-space:nowrap}.menu button{border:0;background:transparent;padding:4px 8px;color:#222}.menu button:hover,.menuselected{background:#d3e7fa!important}.toolbar{height:39px;display:flex;align-items:center;gap:3px;padding:3px 8px;background:linear-gradient(#f8f8f8,#ededed);border-bottom:1px solid #bbb}.tool{border:1px solid transparent;background:transparent;min-width:27px;height:29px;font-size:18px;padding:3px}.tool:hover{background:#dceafa;border-color:#abc6e5}.sep{height:25px;border-left:1px solid #bcbcbc;margin:0 7px}.cfg{height:23px;border:1px solid #aaa;background:#fff;width:138px}.run{color:#15932c!important}.app{height:100vh;display:flex;flex-direction:column;min-width:900px}.workspace{display:grid;grid-template-columns:minmax(210px,26.6%) minmax(450px,1fr) minmax(205px,22%);grid-template-rows:minmax(240px,1fr) 155px;gap:3px;padding:3px 3px 0;background:#dadada;flex:1;min-height:0}.panel{background:#fff;border:1px solid #b7b7b7;overflow:hidden;min-width:0;min-height:0}.left{grid-row:1/3;display:flex;flex-direction:column}.panehead{height:21px;background:linear-gradient(#fafafa,#e4e4e4);border-bottom:1px solid #b4b4b4;display:flex;align-items:center;gap:6px;padding:0 5px;font-weight:600;white-space:nowrap}.panehead button{border:0;background:transparent;padding:0 4px;font-weight:normal}.panehead button.sel{border:1px solid #aaa;background:#fff}.tree{padding:5px;overflow:auto;flex:1;line-height:22px}.tree .item{padding:1px 3px;white-space:nowrap;cursor:pointer}.tree .item:hover,.tree .item.selected{background:#cbe1f7}.indent{padding-left:17px!important}.indent2{padding-left:34px!important}.indent3{padding-left:54px!important}.bottomleft{height:34%;border-top:4px solid #d6d6d6}.navtree{padding:9px;line-height:23px}.center{display:flex;flex-direction:column;grid-row:1;min-width:0}.tabs{height:27px;background:#e7e7e7;display:flex;overflow-x:auto;overflow-y:hidden;border-bottom:1px solid #b9b9b9;flex:none}.tab{display:flex;align-items:center;gap:5px;white-space:nowrap;padding:4px 8px;border-right:1px solid #b8b8b8;background:#e2e6eb;cursor:pointer}.tab.active{background:#fff;border-top:2px solid #438ed1;padding-top:2px;font-weight:bold}.tab .x{color:#777;font-weight:normal;margin-left:4px}.subtabs{height:27px;display:flex;align-items:center;background:#fafafa;gap:0;padding-left:8px;border-bottom:1px solid #c4c4c4;flex:none}.subtabs button{border:0;background:transparent;padding:5px 10px}.subtabs button.sel{background:#b9d9f7;border:1px solid #7aa9d8;border-bottom:0}.subtabs span{padding:0 8px;color:#777}.editorArea{flex:1;min-height:0;position:relative;background:#fff;display:flex;overflow:auto}.editorArea .lines{width:41px;flex:none;background:#f3f4f5;border-right:1px solid #ddd;text-align:right;color:#999;font:13px/21px Consolas,monospace;padding:9px 7px 0 0;white-space:pre;user-select:none}.code{flex:1;width:100%;resize:none;border:0;outline:none;padding:9px 10px;font:13px/21px Consolas,'Courier New',monospace;white-space:pre;tab-size:4;overflow:auto;color:#173249;background:#fff}.designArea{flex:1;overflow:auto;background:#f5f5f5;padding:13px;position:relative}.formCanvas{position:relative;background:#f2f2f2;border:3px solid #d2d0fc;min-width:590px;min-height:370px;max-width:none;box-shadow:0 0 0 1px #e4e4e4}.formTitle{text-align:center;font-size:12px;padding:10px 0;pointer-events:none}.comp{position:absolute;min-height:21px;cursor:move;font:12px Arial,sans-serif}.comp.active{outline:1px dotted #2b80e6;outline-offset:2px}.comp.active:after{content:'';position:absolute;width:6px;height:6px;background:#fff;border:1px solid #3385cb;right:-5px;bottom:-5px}.comp input,.comp select,.comp button,.comp table{font:12px Arial;width:100%;height:100%;border:1px solid #aaa;background:#fff;pointer-events:none}.comp button{background:linear-gradient(#fff,#e9e9e9);border-radius:3px}.comp label{display:block;padding:4px 0}.comp table{border-collapse:collapse}.comp th{border:1px solid #bbb;font-weight:normal;text-align:left;background:white}.right{grid-column:3;grid-row:1/3;display:flex;flex-direction:column}.palette{height:48%;display:flex;flex-direction:column}.paletteScroll{overflow:auto;flex:1;padding:3px}.group{background:#d9d9d9;font-weight:bold;border-bottom:1px solid #bbb;padding:3px 5px}.paletteGrid{display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:3px}.paletteItem{cursor:grab;white-space:nowrap;padding:4px 2px;font-size:11px;border:1px solid transparent;overflow:hidden;text-overflow:ellipsis}.paletteItem:hover{border-color:#82b9f5;background:#dcebf9}.propPanel{border-top:4px solid #cfcfcf;flex:1;display:flex;flex-direction:column}.props{overflow:auto;flex:1}.propRow{display:grid;grid-template-columns:43% 57%;border-bottom:1px solid #e3e3e3;min-height:25px;align-items:center}.propRow label{padding:4px}.propRow input,.propRow select{width:97%;border:1px solid #ccc;padding:3px}.output{grid-column:2;grid-row:2;display:flex;flex-direction:column;background:white}.output pre{flex:1;overflow:auto;margin:0;padding:8px;font:12px/18px Consolas,monospace;white-space:pre-wrap}.status{height:20px;background:#f2f2f2;border-top:1px solid #aaa;display:flex;align-items:center;justify-content:space-between;padding:0 8px;color:#555}.dialogback{position:fixed;inset:0;background:#0005;display:none;align-items:center;justify-content:center;z-index:20}.dialog{width:min(650px,90vw);max-height:85vh;overflow:auto;background:#f7f7f7;border:1px solid #888;box-shadow:0 15px 50px #0006}.dialog h3{margin:0;padding:11px 14px;background:#e2ebf6;font-size:15px}.dialogBody{padding:14px;line-height:1.55}.dialogFoot{padding:10px;text-align:right}.std{padding:6px 12px;background:#e9eef5;border:1px solid #9aaec0;border-radius:2px}.std:hover{background:#d3e9ff}.missionbar{height:29px;display:flex;align-items:center;gap:8px;background:#d5e7f8;border-bottom:1px solid #8ab3d8;padding:0 9px}.missionbar select{height:22px;background:#fff;border:1px solid #8faecb}.missionbar button{padding:3px 9px;border:1px solid #8fb0d0;background:#fff}.hint{color:#777}.runWindow{position:absolute;z-index:10;top:13%;left:8%;min-width:560px;min-height:335px;background:#eee;border:1px solid #7891ad;box-shadow:3px 7px 16px #0004;display:none}.runWindow .wtitle{background:linear-gradient(#eaf1f7,#c5d7ec);border-bottom:1px solid #9faebb;padding:5px 8px;display:flex;justify-content:space-between}.runWindow .wbody{position:relative;height:310px;background:#f2f2f2}.runWindow .close{cursor:pointer;background:#e6e6e6;border:1px solid #aaa}.overlayMsg{position:absolute;bottom:8px;left:12px;right:12px;background:#fffbe0;border:1px solid #ddc170;padding:7px;display:none;z-index:12}.narrowNote{color:#555;font-size:11px;padding:7px;background:#f7f8fb;border-top:1px solid #ddd}.hide{display:none!important}
+
+/* Editor and designer separated sharply from NetBeans chrome */
+.center{background:#d9e2ed;border:1px solid #8aa3bd;box-shadow:0 1px 3px #7089a733}
+.tabs{height:32px;background:#c9d7e6;border-bottom:2px solid #7598c4}
+.tab{background:#d2dce8;border-right:1px solid #a8bacb;padding:7px 10px}
+.tab.active{background:#fff;border-top:3px solid #287bb8;padding-top:4px;color:#164b79}
+.subtabs{height:36px;background:#dce8f3;border-bottom:2px solid #92b5d5;padding-left:10px;gap:3px}
+.subtabs button{background:#eef3f8;border:1px solid #b7c9da;border-radius:3px 3px 0 0;padding:7px 13px;color:#344c65}
+.subtabs button.sel{background:#fff;border:1px solid #638eb6;border-bottom:2px solid white;color:#07558c;font-weight:bold}
+.editorArea{background:white;border:9px solid #e8eef5;border-top:6px solid #e8eef5}
+.editorArea .code{background:white;min-height:100%;color:#102945}
+.designArea{background:#d6e2ef;border:9px solid #e8eef5;border-top:6px solid #e8eef5}
+.formCanvas{background:#f6f6f6;border:2px solid #98aee2;box-shadow:0 0 0 4px white,0 4px 9px #9baabc55}
+#code::placeholder{color:#8797a8;white-space:pre-wrap}
+.comp .resize-handle{display:none;position:absolute;right:-6px;bottom:-6px;width:11px;height:11px;background:#fff;border:1px solid #277fcd;cursor:nwse-resize;z-index:3;touch-action:none}.comp.active .resize-handle{display:block}.comp.active:after{display:none}.comp{user-select:none;touch-action:none} </style></head><body><div class="app"><div class="menu" id="menus"></div><div class="toolbar"><button class="tool" title="New Project" data-action="new">📄</button><button class="tool" title="New File" data-action="file">📁</button><button class="tool" title="Open">📂</button><button class="tool" title="Save All (Ctrl+S)" data-action="save">💾</button><span class="sep"></span><button class="tool" title="Undo (Ctrl+Z)" id="undo">↶</button><button class="tool" title="Redo">↷</button><span class="sep"></span><select class="cfg"><option>&lt;default config&gt;</option></select><span class="sep"></span><button class="tool" data-action="build" title="Build Project">🔨</button><button class="tool" data-action="run" title="Run Project (F6)">▶️</button><button class="tool" data-action="test" title="Test Project">🧪</button><span class="sep"></span><button class="tool" data-action="export" title="Download Java sources">📦</button><button class="tool" data-action="reset" title="Reset project">↺</button><span style="flex:1"></span><span class="hint">Junior Coder Virtual Lab • Java SE (simulasi)</span></div><div class="missionbar"><b>Car Wash Challenge</b><label for="mission">Misi:</label><select id="mission"></select><button data-action="instruction">📋 Instruksi</button><button data-action="check">✓ Periksa Misi</button><button data-action="report">📊 Progres</button><span style="margin-left:auto" id="xp">0 XP</span></div><div class="workspace"><div class="panel left"><div class="panehead"><button class="sel" data-left="Projects">Projects</button><button data-left="Files">Files</button><button data-left="Services">Services</button></div><div class="tree" id="tree"></div><div class="bottomleft"><div class="panehead">Navigator <span style="margin-left:auto">×</span></div><div class="navtree" id="navigator"></div></div></div><div class="panel center"><div class="tabs" id="tabs"></div><div class="subtabs"><button id="srcBtn" class="sel">Source</button><button id="desBtn">Design</button><button id="historyBtn">History</button><span id="editNote">Java source file</span></div><div class="editorArea" id="sourceArea"><div class="lines" id="lines">1</div><textarea class="code" id="code" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="Java source code editor"></textarea></div><div class="designArea hide" id="designArea"><div id="formCanvas" class="formCanvas"><div class="formTitle" id="formTitle">Car Wash Management</div></div><div class="narrowNote">Seret komponen dari Palette ke form atau klik dua kali komponen Palette. Kode GUI dibuat otomatis; kode fungsi/event tetap ditulis sendiri di Source.</div></div><div id="runWindow" class="runWindow"><div class="wtitle"><b>CarWashForm — Running Project</b><button class="close" id="closeRun">✕</button></div><div class="wbody" id="runBody"></div><div class="overlayMsg" id="runMsg"></div></div></div><div class="panel right"><div class="palette"><div class="panehead">Palette <span style="margin-left:auto">×</span></div><div class="paletteScroll" id="palette"></div></div><div class="propPanel"><div class="panehead">Other Components - Properties <span style="margin-left:auto">×</span></div><div class="props" id="props"><div style="text-align:center;color:#888;margin:55px 0">&lt;No Properties&gt;</div></div><div class="panehead">Other Components</div><div class="narrowNote" id="propFoot">Select a component in Design</div></div></div><div class="panel output"><div class="panehead"><button class="sel">Output</button> <button data-action="clear" style="margin-left:auto">×</button></div><pre id="output">Output - CarWashProject
+Ready. Pilih Source untuk menulis Java, lalu Build atau Run (F6).</pre></div></div><div class="status"><span id="status">CarWashProject • Source Packages • carwash</span><span>UTF-8 &nbsp; Java SE &nbsp; INS</span></div></div><div class="dialogback" id="modal"><div class="dialog"><h3 id="modalTitle"></h3><div class="dialogBody" id="modalBody"></div><div class="dialogFoot"><button class="std" id="closeModal">Tutup</button></div></div></div>
+<script>
+'use strict';const $=id=>document.getElementById(id);const STORAGE='junior-coder-classic-netbeans-v4-dnd';const defaults={};
+const missions=[['Project Brief','Identifikasi input (pelanggan, layanan, transaksi), proses perhitungan dan output struk/laporan.','Buat rancangan di kertas atau catatan; tulis rancangan IPO lalu buat class Java sendiri.'],['System Architect','Susun struktur array/list, flowchart atau pseudocode, dan mockup tampilan.','Tambahkan komentar // PSEUDOCODE, serta deklarasi kelas dan rancangan komponen.'],['Data Master','Buat kelas Pelanggan dan Layanan, pengelolaan data pelanggan, serta data layanan.','Periksa atribut, konstruktor, dan penggunaan tipe data.'],['Transaction Engine','Buat GUI Java Swing untuk memasukkan pelanggan, layanan, jumlah mobil, tombol transaksi, dan perhitungan.','Tambahkan komponen, setBounds(), add(), event ActionListener dan operasi harga * jumlah.'],['Bug Hunter','Debug kesalahan sintaks/logika dan uji nilai jumlah mobil yang tidak valid.','Jalankan Build dan Test, lalu perbaiki temuan.'],['Final Delivery','Selesaikan status Menunggu/Diproses/Selesai, laporan harian dan dokumentasi.','Ekspor kode .java, uji di JDK/Apache NetBeans asli, kumpulkan bukti.']];
+let saved;try{saved=JSON.parse(localStorage.getItem(STORAGE)||'null')}catch{}let files={...defaults,...(saved?.files||{})},openTabs=Object.keys(files),active=saved?.active&&Object.hasOwn(files,saved.active)?saved.active:(Object.keys(files)[0]||''),mode='Source',leftMode='Projects',missionIndex=Number(saved?.mission||0),xp=Number(saved?.xp||0),components=saved?.components||[],selected=null,lastBuildOk=false;
+const swingTypes=['JLabel','JTextField','JButton','JComboBox','JTable','JTextArea','JCheckBox','JRadioButton','JPasswordField','JSpinner','JPanel','JScrollPane'];const paletteGroups={'Swing Containers':['Panel','Scroll Pane','Tabbed Pane','Split Pane','Tool Bar','Desktop Pane','Internal Frame'],'Swing Controls':['Label','Button','Toggle Button','Check Box','Radio Button','Button Group','Combo Box','List','Text Field','Text Area','Scroll Bar','Slider','Progress Bar','Formatted Field','Password Field','Spinner','Separator','Table'],'Swing Menus':['Menu Bar','Menu','Menu Item','Popup Menu']};const typeMap={'Label':'JLabel','Button':'JButton','Text Field':'JTextField','Text Area':'JTextArea','Combo Box':'JComboBox','Table':'JTable','Panel':'JPanel','Check Box':'JCheckBox','Radio Button':'JRadioButton','Password Field':'JPasswordField','Spinner':'JSpinner'};
+function log(t){$('output').textContent+=("\n"+t);$('output').scrollTop=$('output').scrollHeight}function persist(){try{localStorage.setItem(STORAGE,JSON.stringify({files,active,mission:missionIndex,xp,components}));return true}catch(e){log('Peringatan: penyimpanan browser tidak tersedia.');return false}}
+function openFile(name){sync();if(!openTabs.includes(name))openTabs.push(name);active=name;mode='Source';renderTabs();renderTree();renderEditor();persist()}
+function renderTabs(){$('tabs').replaceChildren();openTabs.forEach(f=>{let el=document.createElement('div');el.className='tab'+(active===f?' active':'');el.textContent='☕ '+f;el.onclick=()=>openFile(f);$('tabs').append(el)})}
+function renderTree(){const t=$('tree');t.innerHTML='';if(leftMode==='Services'){t.textContent='▣  Databases\n   Java DB\n   Drivers';return}let entries=[['▾ 📂 CarWashProject','root'],['▾ 📁 Source Packages','indent'],['▾ 📦 carwash','indent2'],...Object.keys(files).map(x=>['☕ '+x,'indent3',x]),['➕ New Java Class / JFrame Form...','indent3','__new__'],['▸ 📚 Libraries','indent'],['▸ 📋 Test Packages','indent']];entries.forEach(([label,cls,file])=>{let d=document.createElement('div');d.className='item '+(cls==='root'?'':cls)+(file===active?' selected':'');d.textContent=label;if(file)d.onclick=()=>file==='__new__'?action('file'):openFile(file);if(file==='__new__'){d.title='Buat Java Class kosong atau JFrame Form untuk drag-and-drop';d.style.color='#07558c';d.style.fontWeight='bold'}if(label.includes('Source Packages')||label.includes('📦 carwash')){d.title='Klik kanan → New → Java Class';d.oncontextmenu=e=>{e.preventDefault();action('file')}}t.append(d)})}
+function renderEditor(){$('code').value=files[active]||'';$('code').placeholder=active?'// Ketik kode Java Anda di sini...':'Buat Java Class atau JFrame Form baru lewat File → New File (Ctrl+N) atau ikon folder pada toolbar.\n\nProyek dimulai kosong; tidak ada kode jawaban yang disediakan.';updateLines();$('navigator').textContent=active?'☕ '+active+'\n  📄 Class '+active.replace('.java',''):'Belum ada Java class. Buat class baru.';$('editNote').textContent=active&&/extends\s+(?:javax\.swing\.)?JFrame/.test(files[active]||'')?'Swing GUI Form':'Java Source File — tulis kode sendiri';$('srcBtn').classList.toggle('sel',mode==='Source');$('desBtn').classList.toggle('sel',mode==='Design');$('sourceArea').classList.toggle('hide',mode!=='Source');$('designArea').classList.toggle('hide',mode!=='Design');if(mode==='Design')renderDesign();$('runWindow').style.display='none'}
+function updateLines(){let count=$('code').value.split('\n').length;$('lines').textContent=Array.from({length:count},(_,i)=>i+1).join('\n')}
+function sync(){if(mode==='Source'&&active)files[active]=$('code').value}
+function switchMode(m){sync();mode=m;renderEditor();persist()}
+function showModal(title,html){$('modalTitle').textContent=title;$('modalBody').innerHTML=html;$('modal').style.display='flex'}
+function initPalette(){for(const [group,items] of Object.entries(paletteGroups)){const g=document.createElement('div');g.className='group';g.textContent='▾ '+group;$('palette').append(g);let grid=document.createElement('div');grid.className='paletteGrid';items.forEach(item=>{const el=document.createElement('div');el.className='paletteItem';el.textContent='▣ '+item;const type=typeMap[item];el.title=type?'Drag ke Design atau klik dua kali untuk menambahkan '+type:'Komponen ini belum tersedia pada simulasi';el.draggable=!!type;el.dataset.type=type||'';el.ondragstart=e=>{if(!type){e.preventDefault();return}e.dataTransfer.setData('text/plain',type);e.dataTransfer.effectAllowed='copy'};el.ondblclick=()=>{if(type)dropPalette(type,30+allComponents().length*15,60+allComponents().length*12)};if(!type)el.style.opacity='.45';grid.append(el)});$('palette').append(grid)}}
+function formTemplate(name){return `package carwash;
+
+import javax.swing.*;
+
+public class ${name} extends JFrame {
+    public ${name}() {
+        initComponents();
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+    private void initComponents() {
+        setTitle("${name}");
+        setSize(650, 430);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // <gui-components>
+        // </gui-components>
+    }
+    // </editor-fold>
+
+    // TULIS SENDIRI logika transaksi dan kode event di sini.
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new ${name}().setVisible(true));
+    }
+}
+`}
+function ensureForm(){if(!active){showModal('Belum ada class','Buat class baru terlebih dahulu menggunakan File → New File.');return false}let s=files[active]||'';if(/extends\s+(?:javax\.swing\.)?JFrame/.test(s))return true;if(s.trim()){showModal('Class bukan JFrame Form','<p>Class ini sudah berisi kode. Untuk menghindari menghapus kode siswa, buat <b>New JFrame Form</b> dari File → New File dan pilih jenis JFrame Form.</p>');return false}files[active]=formTemplate(active.replace('.java',''));persist();renderEditor();return true}
+function escapeJavaString(s){return String(s).replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\r/g,'').replace(/\n/g,'\\n')}
+function tableModelJava(id,headers,rows){const names=headers.map(x=>'"'+escapeJavaString(x)+'"').join(', ');const blank=Array(headers.length).fill('null').join(', ');const lines=Array.from({length:rows},()=>`                {${blank}}`).join(',\n');return `        ${id}.setModel(new javax.swing.table.DefaultTableModel(\n            new Object[][] {\n${lines}\n            },\n            new String[] {${names}}\n        ));\n`}
+function tableInfo(id){const s=files[active]||'';const re=new RegExp('\\b'+id+'\\.setModel\\s*\\(\\s*new\\s+(?:javax\\.swing\\.table\\.)?DefaultTableModel\\s*\\(');const m=re.exec(s);if(!m)return {headers:['Pelanggan','Layanan','Total'],rows:0};const start=m.index;let depth=0,end=-1,quoted=false,esc=false;for(let i=s.indexOf('(',start);i<s.length;i++){let ch=s[i];if(quoted){if(esc)esc=false;else if(ch==='\\')esc=true;else if(ch==='"')quoted=false;continue}if(ch==='"'){quoted=true;continue}if(ch==='(')depth++;if(ch===')'&&--depth===0){end=i+1;break}}if(end<0)return {headers:['Pelanggan','Layanan','Total'],rows:0};const block=s.slice(start,end);const names=(block.match(/new\s+String\s*\[\s*\]\s*\{([^}]*)\}/s)||[])[1];const headers=names?[...names.matchAll(/"((?:\\.|[^"\\])*)"/g)].map(x=>x[1].replace(/\\"/g,'"').replace(/\\\\/g,'\\')):['Pelanggan','Layanan','Total'];const data=(block.match(/new\s+Object\s*\[\s*\]\s*\[\s*\]\s*\{([\s\S]*?)\}\s*,\s*new\s+String/s)||[])[1]||'';const rows=(data.match(/\{[^{}]*\}/g)||[]).length;return {headers:headers.length?headers:['Column 1'],rows};}
+function updateTableModel(id,headers,rows){let s=files[active]||'';const re=new RegExp('\\b'+id+'\\.setModel\\s*\\(\\s*new\\s+(?:javax\\.swing\\.table\\.)?DefaultTableModel\\s*\\(');let m=re.exec(s);if(m){let begin=m.index,depth=0,end=-1,quoted=false,esc=false;for(let i=s.indexOf('(',begin);i<s.length;i++){let ch=s[i];if(quoted){if(esc)esc=false;else if(ch==='\\')esc=true;else if(ch==='"')quoted=false;continue}if(ch==='"'){quoted=true;continue}if(ch==='(')depth++;if(ch===')'&&--depth===0){end=i+1;break}}if(end>=0){if(s[end]===';')end++;s=s.slice(0,begin)+s.slice(end).replace(/^\s*\n/,'\n')}}const code=tableModelJava(id,headers,rows);const add=new RegExp('(^[^\\n]*\\badd\\s*\\(\\s*'+id+'\\s*\\)\\s*;)', 'm');if(add.test(s))s=s.replace(add,code+'$1');else s=s.replace('// </gui-components>',code+'        // </gui-components>');files[active]=s;persist();renderDesign();renderProperties();}
+function tableGrid(c){
+ const config=tableInfo(c.id);
+ const viewport=document.createElement('div');
+ viewport.className='jtable-viewport';
+ viewport.style.cssText='width:100%;height:100%;overflow:auto;border:1px solid #aaa;background:#fff;box-sizing:border-box;';
+ const table=document.createElement('table');
+ table.style.cssText='width:100%;height:auto;border-collapse:collapse;table-layout:fixed;background:white;font:12px Arial;';
+ const head=document.createElement('thead');const tr=document.createElement('tr');
+ config.headers.forEach(h=>{const th=document.createElement('th');th.textContent=h;th.style.cssText='border:1px solid #bbb;background:#f0f0f0;text-align:left;padding:3px 5px;height:25px;min-height:25px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:sticky;top:0;z-index:1;';tr.append(th)});
+ head.append(tr);table.append(head);
+ const body=document.createElement('tbody');
+ for(let r=0;r<config.rows;r++){
+   const row=document.createElement('tr');
+   config.headers.forEach(()=>{const td=document.createElement('td');td.textContent='\u00a0';td.style.cssText='border:1px solid #ddd;height:24px;min-height:24px;padding:2px 5px;';row.append(td)});
+   body.append(row);
+ }
+ table.append(body);viewport.append(table);
+ viewport.dataset.rows=String(config.rows);
+ viewport.dataset.columns=String(config.headers.length);
+ viewport.title=`JTable: ${config.rows} baris, ${config.headers.length} kolom`;
+ return viewport;
+}
+function dropPalette(type,x,y){if(!type||!active)return;if(!ensureForm())return;let s=files[active]||'';if(!s.includes('// <gui-components>')||!s.includes('// </gui-components>')){showModal('Source GUI tidak dikenali','Form harus memiliki penanda GUI yang dibuat otomatis. Buat New JFrame Form agar dapat memakai drag-and-drop.');return}let used=new Set((s.match(/\b(?:jLabel|jButton|jTextField|jComboBox|jTable|jPanel|jTextArea|jCheckBox|jRadioButton|jPasswordField|jSpinner|jScrollPane|jList)\d+/g)||[]));let root=type.charAt(0).toLowerCase()+type.slice(1),count=1;while(used.has(root+count))count++;let id=root+count;let w=type==='JTable'?260:type==='JTextArea'?200:type==='JPanel'?220:type==='JLabel'?120:145,h=type==='JTable'?105:type==='JTextArea'?65:type==='JPanel'?100:26;let text=type==='JLabel'?'jLabel'+count:type==='JButton'?'jButton'+count:type==='JCheckBox'?'jCheckBox'+count:type==='JRadioButton'?'jRadioButton'+count:'';let args=text?'("'+text+'")':'()';let entry=`        ${type} ${id} = new ${type}${args};\n        ${id}.setBounds(${Math.round(x)}, ${Math.round(y)}, ${w}, ${h});\n        add(${id});\n`;if(type==='JTable'){entry+=tableModelJava(id,['Pelanggan','Layanan','Total'],4);}if(type==='JButton'){entry+=`        ${id}.addActionListener(evt -> ${id}ActionPerformed(evt));\n`.replaceAll('\\n','\n');let stub=`\n    private void ${id}ActionPerformed(java.awt.event.ActionEvent evt) {\n        // TODO: Tuliskan sendiri kode fungsi tombol ${id} di sini.\n    }\n`;s=s.replace('    // TULIS SENDIRI logika transaksi dan kode event di sini.', '    // TULIS SENDIRI logika transaksi dan kode event di sini.'+stub)}files[active]=s.replace('        // </gui-components>',entry+'        // </gui-components>');selected=id;persist();renderDesign();renderProperties();log('GUI Builder: '+type+' '+id+' → kode Swing dihasilkan otomatis. Tuliskan ActionListener/logika sendiri di Source.');}
+function parseSourceComponents(){const code=(files[active]||'').replace(/\/\/[^\n]*/g,'').replace(/\/\*[\s\S]*?\*\//g,'');let list=[];const reg=/\b(?:JLabel|JTextField|JButton|JComboBox(?:<[^>]+>)?|JTextArea|JCheckBox|JRadioButton|JTable|JPasswordField|JPanel|JSpinner|JScrollPane|JList|JToggleButton|JFormattedTextField|JSlider|JProgressBar|JSeparator)\s+(\w+)\s*=\s*new\s+(JLabel|JTextField|JButton|JComboBox|JTextArea|JCheckBox|JRadioButton|JTable|JPasswordField|JPanel|JSpinner|JScrollPane|JList|JToggleButton|JFormattedTextField|JSlider|JProgressBar|JSeparator)(?:<[^>]*>)?\s*\(([^;]*?)\)\s*;/g;let m;while((m=reg.exec(code))!==null){let variable=m[1],type=m[2],arg=m[3],str=(arg.match(/"([^"\n]*)"/)||[])[1]||'';let bounds=new RegExp('\\b'+variable+'\\.setBounds\\s*\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*\\)').exec(code);let coords=bounds?bounds.slice(1).map(Number):[25+(list.length%3)*20,50+Math.floor(list.length/3)*32,type==='JButton'?110:155,25];let added=new RegExp('\\badd\\s*\\(\\s*'+variable+'\\s*\\)').test(code);if(added||code.includes('add('+variable+')'))list.push({id:variable,type,text:str||({'JLabel':'Label','JButton':'Button','JCheckBox':'Check Box'}[type]||''),x:coords[0],y:coords[1],w:coords[2],h:coords[3],fromSource:true})}return list}
+function allComponents(){let src=parseSourceComponents();return src}
+function makeVisual(c,interactive=false){let w=document.createElement('div');w.className='comp';w.style.cssText=`left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;`;w.dataset.id=c.id;let node;if(c.type==='JLabel'){node=document.createElement('label');node.textContent=c.text||'Label'}else if(c.type==='JButton'){node=document.createElement('button');node.textContent=c.text||'Button'}else if(c.type==='JComboBox'){node=document.createElement('select');['-- Pilih --','Cuci Ekspres','Cuci Lengkap','Salon Mobil'].forEach(s=>{let op=document.createElement('option');op.textContent=s;node.append(op)})}else if(c.type==='JTextArea'){node=document.createElement('textarea');node.value=c.text||''}else if(c.type==='JCheckBox'||c.type==='JRadioButton'){node=document.createElement('label');node.textContent=(c.type==='JCheckBox'?'☐ ':'◯ ')+(c.text||'Option')}else if(c.type==='JTable'){node=tableGrid(c)}else{node=document.createElement('input');node.type=c.type==='JPasswordField'?'password':'text';node.placeholder='';node.value=interactive?'':(c.text||'')}if(interactive){node.style.pointerEvents='auto';if(c.type==='JButton')node.onclick=()=>runButton(c)}w.append(node);return w}
+function renderDesign(){
+ let src=files[active]||'';
+ if(!/extends\s+(?:javax\.swing\.)?JFrame/.test(src)){
+  $('formTitle').textContent='Tulis class extends JFrame di tab Source agar form ditampilkan';
+  [...$('formCanvas').querySelectorAll('.comp')].forEach(e=>e.remove());return;
+ }
+ const match=src.match(/setTitle\s*\(\s*"([^"]+)"/);
+ $('formTitle').textContent=match?match[1]:'Car Wash Management';
+ const size=src.match(/setSize\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)/);
+ $('formCanvas').style.width=(size?Math.min(900,Math.max(590,+size[1])):650)+'px';
+ $('formCanvas').style.height=(size?Math.min(650,Math.max(370,+size[2])):430)+'px';
+ [...$('formCanvas').querySelectorAll('.comp')].forEach(e=>e.remove());
+ allComponents().forEach(c=>{
+  const v=makeVisual(c);
+  v.classList.toggle('active',selected===c.id);
+  v.style.touchAction='none';
+  v.draggable=false;
+  const handle=document.createElement('span');
+  handle.className='resize-handle';handle.title='Seret untuk mengubah ukuran';
+  v.append(handle);
+  v.addEventListener('pointerdown',e=>{
+   if(e.button!==0)return;
+   e.preventDefault();e.stopPropagation();
+   selected=c.id;
+   [...$('formCanvas').querySelectorAll('.comp')].forEach(el=>el.classList.toggle('active',el===v));
+   renderProperties();
+   const resizing=e.target===handle;
+   const sx=e.clientX,sy=e.clientY;
+   const initial={x:c.x,y:c.y,w:c.w,h:c.h};
+   const pointer=e.pointerId;
+   v.setPointerCapture(pointer);
+   let moved=false;
+   function onMove(ev){
+    if(ev.pointerId!==pointer)return;
+    const dx=ev.clientX-sx,dy=ev.clientY-sy;
+    if(Math.abs(dx)+Math.abs(dy)>2)moved=true;
+    if(resizing){
+     c.w=Math.max(25,Math.round(initial.w+dx));
+     c.h=Math.max(21,Math.round(initial.h+dy));
+    }else{
+     c.x=Math.max(0,Math.round(initial.x+dx));
+     c.y=Math.max(25,Math.round(initial.y+dy));
+    }
+    v.style.left=c.x+'px';v.style.top=c.y+'px';
+    v.style.width=c.w+'px';v.style.height=c.h+'px';
+   }
+   function onEnd(ev){
+    if(ev.pointerId!==pointer)return;
+    v.removeEventListener('pointermove',onMove);
+    v.removeEventListener('pointerup',onEnd);
+    v.removeEventListener('pointercancel',onEnd);
+    try{v.releasePointerCapture(pointer)}catch(e){}
+    if(moved){updateSourceBounds(c);log('Design: '+c.id+' → posisi '+c.x+','+c.y+' ukuran '+c.w+'x'+c.h);}
+    renderDesign();renderProperties();
+   }
+   v.addEventListener('pointermove',onMove);
+   v.addEventListener('pointerup',onEnd);
+   v.addEventListener('pointercancel',onEnd);
+  });
+  v.addEventListener('contextmenu',e=>{e.preventDefault();e.stopPropagation();selected=c.id;renderProperties();deleteSelectedComponent()});
+  v.addEventListener('click',e=>e.stopPropagation());
+  $('formCanvas').append(v);
+ });
+}
+function deleteSelectedComponent(){
+ if(mode!=='Design'||!active||!selected){log('Pilih komponen pada Design terlebih dahulu.');return false;}
+ const id=selected,c=allComponents().find(x=>x.id===id);
+ if(!c){log('Komponen terpilih tidak ditemukan.');return false;}
+ // Direct deletion: browser confirmation dialogs may be blocked in file:// mode.
+ let source=files[active]||'';
+ const escaped=id.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+ const linePattern=new RegExp('^\\s*(?:(?:final\\s+)?(?:javax\\.swing\\.)?\\w+(?:<[^>]+>)?\\s+)?'+escaped+'\\s*=\\s*new\\s+|^\\s*'+escaped+'\\s*\\.(?:setBounds|setText|setFont|setEnabled|setVisible|setEditable|setModel|setSelectedIndex|setToolTipText|addActionListener)\\s*\\(|^\\s*(?:this\\.)?add\\s*\\(\\s*'+escaped+'\\s*\\)\\s*;');
+ source=source.split('\n').filter(line=>!linePattern.test(line)).join('\n');
+ // Remove untouched generated empty handlers only; user code is never discarded.
+ const stub=new RegExp('\\n[ \\t]*private\\s+void\\s+'+escaped+'ActionPerformed\\s*\\(\\s*java\\.awt\\.event\\.ActionEvent\\s+evt\\)\\s*\\{[ \\t]*\\n[ \\t]*//\\s*TODO:[^\\n]*\\n[ \\t]*\\}', 'g');
+ source=source.replace(stub,'');
+ files[active]=source;
+ selected=null;
+ persist();renderDesign();renderProperties();
+ log('Komponen '+id+' berhasil dihapus dari Design dan deklarasi Source.');
+ return true;
+}
+function renameComponentVariable(oldName,newName){
+ const newId=newName.trim();
+ if(newId===oldName)return true;
+ if(!/^[A-Za-z_$][\w$]*$/.test(newId)){log('Nama variabel harus identifier Java valid (contoh: txtUsername).');return false;}
+ const reserved=['class','int','void','new','public','private','static','final','return','if','else','for','while','this','super','null','true','false'];
+ if(reserved.includes(newId)){log('Nama variabel adalah kata kunci Java.');return false;}
+ const source=files[active]||'';
+ if(allComponents().some(c=>c.id===newId)){log('Nama '+newId+' sudah dipakai komponen lain.');return false;}
+ // Preserve Java comments and string/char literals; rename identifiers and matching handler methods.
+ const pattern=/(\/\*[\s\S]*?\*\/|\/\/[^\n]*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|([A-Za-z_$][\w$]*)/g;
+ files[active]=source.replace(pattern,(all,literal,identifier)=>{
+   if(literal)return literal;
+   if(identifier===oldName)return newId;
+   if(identifier===oldName+'ActionPerformed')return newId+'ActionPerformed';
+   return identifier;
+ });
+ selected=newId;
+ persist();renderDesign();renderProperties();
+ log('Variable renamed: '+oldName+' → '+newId+' (Source dan Design tersinkronisasi).');
+ return true;
+}
+function updateSourceBounds(c){let s=files[active]||'',r=new RegExp('(\\b'+c.id+'\\.setBounds\\s*\\()([^)]*)(\\))');if(r.test(s))files[active]=s.replace(r,(_,a,b,z)=>a+[c.x,c.y,c.w,c.h].join(', ')+z);else files[active]=s.replace(/(\badd\s*\(\s*\w+\s*\)\s*;)/,`${c.id}.setBounds(${c.x}, ${c.y}, ${c.w}, ${c.h});\n        $1`);persist()}
+function addComponent(type,x,y){dropPalette(type,x,y)}
+function renderProperties(){
+ const c=allComponents().find(x=>x.id===selected),p=$('props');p.innerHTML='';
+ if(!c){p.innerHTML='<div style="text-align:center;color:#888;margin:55px 0">&lt;No Properties&gt;</div>';return;}
+ const title=document.createElement('div');title.className='group';title.textContent=c.id+'  ['+c.type+']';p.append(title);
+ for(const key of ['id','text','x','y','w','h']){
+  const row=document.createElement('div');row.className='propRow';const l=document.createElement('label');
+  l.textContent=({id:'variableName',text:'text',x:'x',y:'y',w:'width',h:'height'})[key];
+  const input=document.createElement('input');input.value=c[key];
+  input.addEventListener('change',()=>{
+   const old=c.id;
+   if(key==='id'){
+    if(!renameComponentVariable(old,input.value)){input.value=old;}
+    return;
+   }
+   const value=['x','y','w','h'].includes(key)?Math.max(0,parseInt(input.value,10)||0):input.value;
+   c[key]=value;
+   if(['x','y','w','h'].includes(key)){updateSourceBounds(c);}
+   else if(key==='text'){
+    let s=files[active]||'';
+    const rx=new RegExp('(\\b'+old+'\\s*=\\s*new\\s+'+c.type+'\\s*\\(\\s*)"[^"\\n]*"');
+    const safeText=String(value).replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n');
+    if(rx.test(s))s=s.replace(rx,(_,prefix)=>prefix+'"'+safeText+'"');
+    else{
+     const assign=new RegExp('('+old+'\\.setText\\s*\\(\\s*)"[^"\\n]*"');
+     if(assign.test(s))s=s.replace(assign,(_,prefix)=>prefix+'"'+safeText+'"');
+     else s=s.replace(new RegExp('(^[^\n]*'+old+'\\s*=\\s*new\\s+'+c.type+'[^\n]*;)', 'm'), '$1\n        '+old+'.setText("'+safeText+'");');
+    }
+    files[active]=s;
+   }
+   selected=old;persist();renderDesign();renderProperties();
+  });
+  row.append(l,input);p.append(row);
+ }
+ if(c.type==='JTable'){
+   const info=tableInfo(c.id);const section=document.createElement('div');section.style.cssText='margin:8px 5px;padding:8px;background:#edf5ff;border:1px solid #a9c4e4';
+   const heading=document.createElement('b');heading.textContent='Table Model — JTable';section.append(heading);
+   function field(title,value,type){const row=document.createElement('div');row.style.cssText='margin-top:7px;display:flex;align-items:center;gap:6px';const lab=document.createElement('label');lab.style.cssText='width:84px;flex-shrink:0';lab.textContent=title;const el=document.createElement('input');el.type=type||'text';el.value=value;el.style.cssText='min-width:0;flex:1;padding:4px;border:1px solid #aaa';row.append(lab,el);section.append(row);return el}
+   const cols=field('Columns',info.headers.length,'number');cols.min=1;cols.max=30;
+   const rows=field('Rows',info.rows,'number');rows.min=0;rows.max=100;
+   const labels=document.createElement('textarea');labels.value=info.headers.join('\n');labels.rows=4;labels.style.cssText='margin-top:7px;width:100%;resize:vertical;padding:5px;border:1px solid #aaa';
+   const sub=document.createElement('div');sub.textContent='Nama kolom (satu nama per baris):';sub.style.marginTop='8px';section.append(sub,labels);
+   const apply=document.createElement('button');apply.type='button';apply.className='std';apply.style.marginTop='8px';apply.textContent='Apply Table Model';section.append(apply);
+   const warning=document.createElement('small');warning.style.cssText='display:block;margin-top:6px;color:#455';warning.textContent='Model saat ini: '+info.rows+' baris × '+info.headers.length+' kolom. Klik Apply Table Model untuk menerapkan perubahan. Baris lebih banyak dapat digulir di dalam JTable.';section.append(warning);
+   cols.addEventListener('change',()=>{const n=Math.min(30,Math.max(1,parseInt(cols.value)||1));let a=labels.value.split('\n');while(a.length<n)a.push('Column '+(a.length+1));labels.value=a.slice(0,n).join('\n')});
+   apply.addEventListener('click',()=>{const n=Math.min(30,Math.max(1,parseInt(cols.value)||1));const r=Math.min(100,Math.max(0,parseInt(rows.value)||0));let names=labels.value.split(/\r?\n/).map(x=>x.trim());while(names.length<n)names.push('Column '+(names.length+1));names=names.slice(0,n).map((x,i)=>x||'Column '+(i+1));updateTableModel(c.id,names,r);log('JTable '+c.id+': '+n+' kolom, '+r+' baris. Source DefaultTableModel diperbarui.');});
+   p.append(section);
+ }
+ const del=document.createElement('button');del.type='button';del.className='std';del.textContent='🗑 Delete Component';del.style.cssText='margin:12px 6px;color:#a52222;cursor:pointer';
+ del.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();deleteSelectedComponent()});p.append(del);
+ $('propFoot').textContent='Perubahan Properties disinkronkan ke Source.';
+}
+function build(){sync();let errors=[],warn=[];if(!Object.keys(files).length)errors.push('Belum ada class Java. Buat class dengan File → New File.');for(let [name,s] of Object.entries(files)){const pure=s.replace(/\/\/[^\n]*/g,'').replace(/\/\*[\s\S]*?\*\//g,'');if(!/\bpackage\s+carwash\s*;/.test(pure))warn.push(name+': package carwash; belum ditulis (baris pertama Source).');if(!new RegExp('\\bclass\\s+'+name.replace('.java','')+'\\b').test(pure))errors.push(name+': deklarasi class tidak ditemukan. Pastikan Source berisi public class '+name.replace('.java','')+' (pilih New JFrame Form untuk GUI).');let stack=0;for(let a of pure.replace(/"(?:\\.|[^"\\])*"/g,'').match(/[{}]/g)||[])stack+=a==='{'?1:-1;if(stack!==0)errors.push(name+': kurung kurawal { } tidak seimbang.')}let form=(files[active]||'');if(!Object.values(files).some(code=>/extends\s+(?:javax\.swing\.)?JFrame/.test(code)))warn.push('Belum ada class GUI yang extends JFrame.');if(form&&/\bJFrame\b/.test(form)&&!/import\s+javax\.swing\.\*/.test(form))warn.push('Periksa import javax.swing.* untuk komponen Swing.');if(form&&/\bJFrame\b/.test(form)&&!/setLayout\s*\(/.test(form))warn.push('Tata letak form belum diatur (setLayout).');const src=parseSourceComponents();if(/extends\s+JFrame/.test(form)&&!src.length)warn.push('Belum ada komponen GUI yang ditambahkan melalui kode Java.');if(!errors.length)warn.push('Build ini pemeriksaan pola kode, bukan kompilasi javac. Sintaks Java tetap harus diuji di NetBeans/JDK.');lastBuildOk=errors.length===0;$('output').textContent='ant -f CarWashProject clean jar\ninit:\ncompile:\n'+(errors.map(x=>'error: '+x).join('\n')||'PEMERIKSAAN STRUKTUR LULUS (bukan hasil kompilasi Java)')+'\n'+warn.map(x=>'warning: '+x).join('\n')+'\n';return {errors,warn}}
+function repairEmptyClasses(){
+ sync();let changed=[];
+ for(const [filename,source] of Object.entries(files)){
+   if(source.trim()!=='')continue;
+   const className=filename.replace(/\.java$/,'');
+   files[filename]=formTemplate(className);
+   changed.push(filename);
+ }
+ if(changed.length){persist();renderTabs();renderTree();renderEditor();log('JFrame template dibuat untuk file kosong: '+changed.join(', '));}
+ $('modal').style.display='none';
+ build();
+}
+function run(){if(!active){log('Buat class GUI dahulu sebelum Run.');return}const b=build();if(b.errors.length){
+ log('RUN FAILED: perbaiki kode terlebih dahulu.');
+ const emptyNames=Object.entries(files).filter(([name,code])=>!code.trim()).map(([name])=>name);
+ if(emptyNames.length){
+   showModal('Class Java belum dibuat', '<p>File <b>'+emptyNames.map(x=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;')).join(', ')+'</b> masih kosong. Di NetBeans, nama file saja tidak otomatis membuat deklarasi class.</p><p>Tekan tombol berikut untuk membuat kerangka JFrame hanya pada file kosong. Kode class lain tidak akan diubah.</p><button class="std" id="repairEmptyClasses">Buat kerangka JFrame untuk file kosong</button>');
+   $('repairEmptyClasses').onclick=repairEmptyClasses;
+ }
+ return;
+}launchPreview(active)}
+
+function eventMethod(source,id){
+ const escaped=id.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+ const match=new RegExp('\\b(?:private|public|protected)?\\s*void\\s+'+escaped+'ActionPerformed\\s*\\([^)]*\\)\\s*\\{').exec(source);
+ if(!match)return '';
+ const start=match.index+match[0].length;let depth=1,quote='',escape=false;
+ for(let i=start;i<source.length;i++){
+  const ch=source[i];if(quote){if(escape)escape=false;else if(ch==='\\')escape=true;else if(ch===quote)quote='';continue;}
+  if(ch==='"'||ch==="'"){quote=ch;continue}if(ch==='{')depth++;else if(ch==='}'&&--depth===0)return source.slice(start,i);
+ }return '';
+}
+function launchPreview(file){
+ if(!files[file])return false;
+ active=file;if(!openTabs.includes(file))openTabs.push(file);
+ renderTabs();renderTree();renderEditor();
+ const body=$('runBody');body.replaceChildren();
+ const src=files[file]||'';const list=parseSourceComponents();
+ if(!/extends\s+(?:javax\.swing\.)?JFrame/.test(src)){log('Class '+file+' bukan JFrame; tidak dapat ditampilkan sebagai halaman GUI.');return false;}
+ list.forEach(c=>body.append(makeVisual(c,true)));
+ $('runWindow').style.display='block';$('runMsg').style.display='none';
+ const title=src.match(/setTitle\s*\(\s*"([^"]+)"/);
+ const bar=$('runWindow').querySelector('.wtitle b');if(bar)bar.textContent=(title?title[1]:file.replace('.java',''))+' — Running Project';
+ log('Preview form: '+file+' (simulasi HTML; bukan JVM).');return true;
+}
+function runButton(button){
+ const source=files[active]||'',msg=$('runMsg');msg.style.display='block';
+ const handler=eventMethod(source,button.id);
+ const wired=new RegExp('\\b'+button.id+'\\.addActionListener\\s*\\(').test(source);
+ if(!wired){msg.textContent='Event tombol belum terhubung: tambahkan addActionListener(...).';return;}
+ if(!handler){msg.textContent='Method '+button.id+'ActionPerformed(...) belum ditemukan; isi event di Source.';return;}
+ // Simulasi kasus login sederhana: bukan interpreter Java umum.
+ const loginPattern=/\.equals\s*\(\s*"[^"]+"\s*\)/.test(handler)&&/getText\s*\(\s*\)|getPassword\s*\(\s*\)/.test(handler);
+ if(loginPattern){
+  const creds=[...handler.matchAll(/(\w+)\.equals\s*\(\s*"([^"]+)"\s*\)/g)];
+  const inputs=[...$('runBody').querySelectorAll('input, textarea, select')];
+  const named={};for(const input of inputs){const id=input.closest('.comp')?.dataset.id;if(id)named[id]=input.value;}
+  const mappings=[...handler.matchAll(/String\s+(\w+)\s*=\s*(?:new\s+String\s*\(\s*)?(\w+)\.(getText|getPassword)\s*\(\s*\)/g)];
+  const varValues={};mappings.forEach(m=>{varValues[m[1]]=named[m[2]]??'';if(new RegExp('\\b'+m[1]+'\\s*=\\s*'+m[2]+'\\.getText\\(\\)\\.trim\\(\\)').test(handler))varValues[m[1]]=varValues[m[1]].trim();});
+  if(creds.length<2||mappings.length<2){msg.textContent='Pola login belum dikenali sepenuhnya. Periksa nama variabel komponen dan event.';return;}
+  const correct=creds.every(m=>varValues[m[1]]===m[2]);
+  if(correct){
+   const target=(handler.match(/new\s+(\w+)\s*\(\s*\)/)||[])[1];
+   if(target){const targetFile=target+'.java';if(!files[targetFile]){msg.textContent='Login berhasil, tetapi class '+targetFile+' belum dibuat. Buat JFrame '+target+' dahulu.';return;}
+    if(!launchPreview(targetFile)){msg.textContent='Class tujuan harus extends JFrame dan memiliki GUI yang dapat ditampilkan.';return;}
+    return;
+   }msg.textContent='Login berhasil (simulasi). Tidak ditemukan class tujuan.';
+  }else{
+   msg.textContent='Username atau Password Salah! (simulasi login)';
+   const clears=[...handler.matchAll(/(\w+)\.setText\s*\(\s*""\s*\)/g)];
+   clears.forEach(m=>{const field=$('runBody').querySelector('[data-id="'+m[1]+'"] input, [data-id="'+m[1]+'"] textarea');if(field)field.value='';});
+   const focused=(handler.match(/(\w+)\.requestFocus\s*\(/)||[])[1];
+   if(focused){const input=$('runBody').querySelector('[data-id="'+focused+'"] input, [data-id="'+focused+'"] textarea');input?.focus();}
+  }return;
+ }
+ if(!/getText\s*\(/.test(handler)){msg.textContent='Event terdeteksi, tetapi pembacaan input belum ditemukan pada fungsi tombol ini.';return;}
+ if(!/\b\w+\s*\*\s*\w+\b|hitungTotal\s*\(/.test(handler.replace(/\/\/[^\n]*/g,''))){msg.textContent='Event belum dapat disimulasikan. Untuk transaksi, tambahkan perhitungan harga * jumlah pada fungsi tombol.';return;}
+ const fields=[...$('runBody').querySelectorAll('input')],qtyField=fields.find(x=>/^\d+$/.test(x.value));
+ if(!qtyField){msg.textContent='Masukkan angka jumlah mobil terlebih dahulu.';return;}
+ const qty=Number(qtyField.value);if(!Number.isInteger(qty)||qty<=0){msg.textContent='Masukkan jumlah mobil yang valid.';return;}
+ const sel=$('runBody').querySelector('select'),prices={'Cuci Ekspres':30000,'Cuci Lengkap':50000,'Salon Mobil':150000},price=prices[sel?.value]||30000;
+ msg.textContent='Perhitungan contoh (bukan hasil eksekusi kode Java Anda): '+qty+' mobil × Rp'+price.toLocaleString('id-ID')+' = Rp'+(qty*price).toLocaleString('id-ID')+'.';
+}
+
+function test(){sync();let b=build(),s=(files[active]||'').replace(/\/\/[^\n]*/g,''),all=Object.values(files).join('\n'),checks=[['JFrame dan setVisible',/extends\s+JFrame/.test(s)&&/setVisible\s*\(\s*true\s*\)/.test(all)],['Input pelanggan',/new\s+JTextField/.test(s)],['Pilihan layanan',/new\s+JComboBox/.test(s)],['Tombol transaksi',/new\s+JButton/.test(s)],['Event ActionListener',/addActionListener\s*\(/.test(s)],['Membaca input',/getText\s*\(/.test(s)],['Konversi input angka',/parseInt\s*\(|valueOf\s*\(/.test(s)],['Perhitungan biaya',/\b\w+\s*\*\s*\w+\b/.test(s)],['Status transaksi',/Menunggu/.test(all)&&/Diproses/.test(all)&&/Selesai/.test(all)],['Laporan atau JTable',/JTable|laporan/i.test(all)]];$('output').textContent='TESTING (simulasi pemeriksaan pola sumber, BUKAN junit asli)\n'+checks.map(([n,ok])=>(ok?'PASS':'TODO')+'  '+n).join('\n')+'\n\n'+checks.filter(x=>x[1]).length+'/'+checks.length+' indikator terdeteksi.\n';return checks}
+function download(name,contents,kind='text/plain'){let blob=new Blob([contents],{type:kind+';charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function exportJava(){sync();const content=Object.entries(files).map(([name,s])=>'// ===== FILE: '+name+' =====\n'+s).join('\n\n');download('CarWashProject_All_Java_Sources.txt',content);showModal('Ekspor source Java','<p>Seluruh file Java disimpan dalam satu berkas teks dengan pemisah nama file. Untuk digunakan di NetBeans asli, salin setiap bagian ke file <code>.java</code> sesuai namanya.</p><p>Gunakan menu <b>File → Download file .java aktif</b> untuk menyimpan satu file Java secara terpisah.</p>')}
+function instruction(){let m=missions[missionIndex];showModal('Misi '+(missionIndex+1)+' — '+m[0],'<p><b>Tujuan:</b> '+m[1]+'</p><p><b>Arahan:</b> '+m[2]+'</p><p><b>Bukti kerja:</b> source Java, hasil Run/Test dan rancangan program.</p><p><b>Catatan:</b> angka harga layanan untuk latihan dapat ditentukan guru; PDF tidak memberikan harga resmi.</p>')}
+function checkMission(){let cs=test(),passes=cs.filter(x=>x[1]).length;if(missionIndex<2){showModal('Pemeriksaan misi','<p>Misi analisis dan perancangan memerlukan pemeriksaan guru pada flowchart, pseudocode dan spesifikasi. Anda dapat mencatat penyelesaiannya lewat tombol berikut.</p><button class="std" onclick="award()">Tandai latihan selesai (+100 XP)</button>')}else{showModal('Umpan balik misi','<p>Indikator kode terdeteksi: <b>'+passes+'/10</b>.</p><p>Hasil pemeriksaan berbasis pola belum membuktikan bahwa kode terkompilasi dan seluruh fungsi benar.</p><button class="std" onclick="award()">Catat latihan telah diperiksa (+100 XP)</button>')}}function award(){xp+=100;missionIndex=Math.min(5,missionIndex+1);$('xp').textContent=xp+' XP';$('mission').value=String(missionIndex);persist();$('modal').style.display='none';log('Progres disimpan +100 XP. Pemeriksaan guru masih diperlukan.')}
+function showNewClassDialog(){
+ showModal('New File — CarWashProject', '<div style="display:grid;grid-template-columns:115px 1fr;gap:11px;align-items:center"><label for="newClassName">Class Name:</label><input id="newClassName" placeholder="Contoh: FormCarWash" autocomplete="off" style="padding:7px;border:1px solid #9aaec0;font:13px Arial"><label for="newClassType">File Type:</label><select id="newClassType" style="padding:7px;border:1px solid #9aaec0"><option value="class">Java Class (kosong)</option><option value="form">JFrame Form (GUI Builder)</option></select><span>Project:</span><b>CarWashProject</b><span>Package:</span><b>carwash</b><span>Created File:</span><code id="newClassPreview">—</code></div><p id="newClassError" role="alert" style="color:#ba2323;min-height:16px"></p><div style="text-align:right;margin-top:15px"><button class="std" onclick="document.getElementById(\'modal\').style.display=\'none\'">Cancel</button> <button class="std" id="finishCreateClass">Finish</button></div>');
+ const input=$('newClassName'), preview=$('newClassPreview');
+ input.oninput=()=>{preview.textContent=input.value.trim()?input.value.trim().replace(/\.java$/i,'')+'.java':'—';$('newClassError').textContent=''};
+ input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();createJavaClass()}};
+ $('finishCreateClass').onclick=createJavaClass;
+ input.focus();
+}
+function createJavaClass(){
+ let value=$('newClassName').value.trim().replace(/\.java$/i,'');
+ if(!/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(value)){$('newClassError').textContent='Masukkan nama class Java yang valid tanpa spasi.';return}
+ const filename=value+'.java';
+ if(Object.prototype.hasOwnProperty.call(files,filename)){$('newClassError').textContent='Class '+filename+' sudah ada.';return}
+ files[filename]=$('newClassType').value==='form'?formTemplate(value):'';$('modal').style.display='none';openFile(filename);log('Created Java file: carwash/'+filename+'. Silakan tulis kode sendiri di tab Source.');
+}
+function action(act){if(act==='save'){sync();if(persist())log('Save All: data tersimpan di browser ini.');else log('Save All gagal. Gunakan Export sebagai cadangan.')}if(act==='build')build();if(act==='run')run();if(act==='test')test();if(act==='export')exportJava();if(act==='instruction')instruction();if(act==='check')checkMission();if(act==='report')showModal('Progres Lab Maya','<p>XP: <b>'+xp+'</b></p><p>Misi aktif: <b>'+missions[missionIndex][0]+'</b></p><p>Semua source tersimpan lokal di browser. Lakukan ekspor untuk cadangan.</p><button class="std" onclick="download(\'CarWashProject_Backup.json\',JSON.stringify({files,components,missionIndex,xp},null,2),\'application/json\')">Ekspor backup JSON</button>');if(act==='clear')$('output').textContent='Output - CarWashProject\n';if(act==='reset'){if(confirm('Hapus semua class dan kembali ke proyek kosong?')){files={...defaults};components=[];openTabs=[];xp=0;missionIndex=0;active='';mode='Source';selected=null;persist();renderTabs();renderTree();renderEditor();$('mission').value='0';$('xp').textContent='0 XP';$('output').textContent='Project reset.'}}if(act==='file')showNewClassDialog();if(act==='new')showModal('New Java Project','<p>CarWashProject adalah proyek latihan kosong. Buat class sendiri lewat tombol <b>New File</b> atau tekan <b>Ctrl+N</b>, lalu ketik sendiri seluruh kode sumber Java.</p><button class="std" onclick="document.getElementById(\'modal\').style.display=\'none\';action(\'file\')">New Java Class</button>')}
+$('menus').innerHTML=['File','Edit','View','Navigate','Source','Refactor','Run','Debug','Profile','Team','Tools','Window','Help'].map(x=>`<button data-menu="${x}">${x}</button>`).join('');document.querySelectorAll('[data-menu]').forEach(b=>b.onclick=()=>{let m=b.dataset.menu;if(m==='File')showModal('File','<button class="std" onclick="document.getElementById(\'modal\').style.display=\'none\';action(\'file\')">New Java Class...</button> <button class="std" onclick="download(active,files[active],\'text/x-java-source\')">Download file .java aktif</button> <button class="std" onclick="action(\'save\')">Save All</button> <button class="std" onclick="action(\'export\')">Export All Sources</button>');else if(m==='Run')showModal('Run','<button class="std" onclick="action(\'build\')">Build Project</button> <button class="std" onclick="action(\'run\')">Run Project (F6)</button> <button class="std" onclick="action(\'test\')">Test</button>');else showModal(m,'<p>Menu tampilan simulasi untuk latihan; fungsi utama berada pada toolbar, editor, Design, Palette, dan Properties.</p>')});document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>action(b.dataset.action));document.querySelectorAll('[data-left]').forEach(b=>b.onclick=()=>{leftMode=b.dataset.left;document.querySelectorAll('[data-left]').forEach(x=>x.classList.toggle('sel',x===b));renderTree()});$('srcBtn').onclick=()=>switchMode('Source');$('desBtn').onclick=()=>{if(!active){alert('Buat Java class terlebih dahulu.');return}switchMode('Design')};$('historyBtn').onclick=()=>showModal('History','<p>Perubahan disimpan otomatis di browser. Gunakan ekspor file untuk mencadangkan kode.</p>');$('code').addEventListener('input',()=>{if(!active)return;files[active]=$('code').value;updateLines();persist()});$('code').addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();let t=e.target,a=t.selectionStart,b=t.selectionEnd;t.setRangeText('    ',a,b,'end');files[active]=t.value;updateLines();persist()}});$('formCanvas').ondragover=e=>e.preventDefault();$('formCanvas').ondrop=e=>{e.preventDefault();const type=e.dataTransfer.getData('text/plain');const rect=$('formCanvas').getBoundingClientRect();dropPalette(type,Math.max(0,e.clientX-rect.left),Math.max(28,e.clientY-rect.top))};$('formCanvas').onclick=e=>{if(e.target===$('formCanvas')){selected=null;renderProperties();renderDesign()}};$('closeRun').onclick=()=>$('runWindow').style.display='none';$('closeModal').onclick=()=>$('modal').style.display='none';$('modal').onclick=e=>{if(e.target===$('modal'))$('modal').style.display='none'};$('mission').innerHTML=missions.map((m,i)=>`<option value="${i}">Misi ${i+1} — ${m[0]}</option>`).join('');$('mission').value=String(missionIndex);$('mission').onchange=e=>{missionIndex=+e.target.value;persist();instruction()};$('xp').textContent=xp+' XP';document.addEventListener('keydown',e=>{if((e.key==='Delete'||e.key==='Backspace')&&mode==='Design'&&selected&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)&&!document.activeElement?.isContentEditable){e.preventDefault();deleteSelectedComponent();return}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='n'){e.preventDefault();action('file')}if(e.key==='F6'){e.preventDefault();run()}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();action('save')}});initPalette();renderTabs();renderTree();renderEditor();
+</script></body></html>
